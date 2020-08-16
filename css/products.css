@@ -1,0 +1,36 @@
+.autoF{
+    width: 200px;
+}
+.fondoC{
+ background: pink;
+
+}
+
+.banneR{
+    height: 250px;
+    width: 100%;
+}
+
+.productosE{
+    text-align: center;
+    color: plum;
+    size: 20px;
+}
+
+.bloque{
+    background: rgb(241, 214, 241);
+    margin: 10px 0 white;
+}
+.costo{
+    width: 200px;
+    text-align: right;
+}
+
+.descripcion{
+ 
+    text-size-adjust: 20px;
+}
+
+.nombrE{
+    width: 160px;
+}

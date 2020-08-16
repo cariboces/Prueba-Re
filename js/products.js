@@ -4,3 +4,40 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
 });
+//https://japdevdep.github.io/ecommerce-api/product/5678.json
+
+
+
+
+fetch("https://japdevdep.github.io/ecommerce-api/product/all.json")
+.then(res => res.json())
+.then(datos => {
+    tabla(datos)
+
+})
+
+function tabla(datos){
+ 
+    contenedor.innerHTML = ''
+    i = 0;
+    for( let valor of datos){
+
+        console.log(datos[i].name)
+
+        contenedor.innerHTML += `
+        <tr class="fondoC">
+        <th class="nombrE">${datos[i].name}</th>
+        <th class="descripcio">${datos[i].description}</th>
+        <th class="costo">${datos[i].cost} ${datos[i].currency}</th>
+        <th class="bloque"><img src="${datos[i].imgSrc}" class="autoF"></th>
+        
+        <th class="bloque">${datos[i].soldCount} SoldCount</th>
+       </tr>
+
+        
+        
+        `
+        
+        i++
+    }
+}

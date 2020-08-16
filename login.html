@@ -13,41 +13,56 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <style>
-    html, body{
-      height: 100%;
-    }
-
-    body {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      background-color: #f5f5f5;
-    }
-
-    .signin {
-      width: 100%;
-      max-width: 330px;
-      padding: 15px;
-      margin: auto;
-    }
-  </style>
+  <link rel="stylesheet" href="css/estilosLogin.css">
 </head>
 
-<body class="text-center">
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 1 (Fecha de entrega: 16/08/2020) -> Punto 3 y 4.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
+<body>
 
+  <div class="contenedor_todo">
+
+        <div class="caja_trasera">
+            <div class="caja_trasera-login">
+                <h3>Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la pagina</p>
+                <button id="btn_iniciar-sesion">Iniciar sesión</button>
+            </div>
+      
+       
+
+    <div class="caja_trasera-register">
+        <h3>Aun no tienes cuenta?</h3>
+        <p>Registrate para inciar sesión</p>
+        <button id="btn-registrarse">Registrarse</button>
+    </div>
+</div>
+
+    <div class="contenedor_login-register">
+        <form action="" class="formulario-login">
+            <h2>Iniciar sesión</h2>
+            <input id='usuario' type="text" placeholder="Usuario">
+            <input id='contra' type="password" placeholder="Contraseña">
+            <button id="btn">Entrar</button>
+
+        </form>
+
+
+        <form action="" class="formulario_register">
+            <h2>Registrarse</h2>
+            <input type="text" placeholder="Nombre Completo">
+            <input type="text" placeholder="Correo electronico">
+            <input type="text" placeholder="Usuario">
+            <input type="password"  placeholder="Contraseña">
+            <button>Registrarse</button>
+        </form>
+    </div>
+
+
+
+    </div>
+
+  
   <script src="js/init.js"></script>
-  <script src="js/login.js"></script>
+  <script src="js/login2.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>
