@@ -5,7 +5,38 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 });
 //https://japdevdep.github.io/ecommerce-api/product/5678.json
+    
 
+
+
+function des (){
+  datos.sort(function (a, b) {
+    if (a.soldCount> b.soldCount) {
+      return 1;
+    }
+    if (a.soldCount < b.soldCount) {
+      return -1;
+    }
+ 
+    return 0;
+  })
+}
+
+function asc(){
+     
+datos.sort(function (a, b) {
+  if (a.cost > b.cost) {
+    return 1;
+  }
+  if (a.cost < b.cost) {
+    return -1;
+  }
+
+  return 0;
+})
+
+datos.reverse();
+}
 
 
 
@@ -16,13 +47,40 @@ fetch("https://japdevdep.github.io/ecommerce-api/product/all.json")
 
 })
 
+
 function tabla(datos){
+
+  
+datos.sort(function (a, b) {
+    if (a.soldCount> b.soldCount) {
+      return 1;
+    }
+    if (a.soldCount < b.soldCount) {
+      return -1;
+    }
+    
+    return 0;
+  })
+
+   
+datos.sort(function (a, b) {
+    if (a.cost > b.cost) {
+      return 1;
+    }
+    if (a.cost < b.cost) {
+      return -1;
+    }
+    
+    return 0;
+  })
+
+  datos.reverse(); 
  
     contenedor.innerHTML = ''
     i = 0;
     for( let valor of datos){
 
-        console.log(datos[i].name)
+        
 
         contenedor.innerHTML += `
         <tr class="fondoC">
@@ -40,4 +98,10 @@ function tabla(datos){
         
         i++
     }
+   
+
 }
+
+
+
+
