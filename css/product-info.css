@@ -1,0 +1,69 @@
+
+
+.imagen {
+
+    
+    display: inline-block;
+    width: 100px;
+    float:left;
+    margin:  20px;
+
+}
+
+
+.imagen:hover {
+
+    width: 500px;
+}
+
+.titulo{
+    font-size: 100px;
+   
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.imagen-principal{
+    width: 700px;
+   margin-left: 20%;
+}
+
+
+#productitos{
+    max-width: 2000px;
+    
+}
+
+.description{
+    background: rgba(207, 207, 248, 0.4);
+    text-align: center;
+    margin: auto;
+    width: 1100px;
+    line-height: 40px;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+table {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+
+table tr th{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+   
+   
+
+}
+
+.score{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    margin-top: 30px;
+}

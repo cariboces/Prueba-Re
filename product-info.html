@@ -13,6 +13,11 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/star.css">
+  <link rel="stylesheet" href="css/comentarios.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/product-info.css">
+ <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,6 +38,41 @@
       <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
     </div>
   </div>
+ 
+
+  <div id="productitos"></div>
+<div>
+<div  class="comments-container">
+  <h2>Comentarios</h2>
+  <ul   class="comments-list" class="comments-list">
+    <li id="comentarios" >
+
+    </li>
+     
+       
+  </ul>
+</div>
+</div>
+
+
+<div>
+  <form action="">
+
+    <h2>Cometar</h2>
+    <input type="text" placeholder="Nombre"  id="cajaNombre">
+    <input type="number" name="" id="estrellitas" placeholder="Elije una puntuacion del 1 al 5">
+  
+    <textarea id="cajaComentarios" name="mensaje" placeholder="Agrega un comentario"></textarea>
+    <button id="boton">Comentar</button>
+   
+</form>
+ 
+
+
+
+</div>
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -50,10 +90,17 @@
       <div></div>
     </div>
   </div>
+
+
+
+
+
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/productitos.js"></script>
 </body>
 
 </html>

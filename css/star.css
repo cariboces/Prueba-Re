@@ -1,0 +1,13 @@
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+}
+
+.stars-outer::before {
+    content: "\f005"; 
+    color: #f8ce0b;
+}
+
+
