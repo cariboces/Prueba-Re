@@ -12,29 +12,35 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilomenu.css">
   </head>
   <body>
+
     <nav>
-      <a href="#">Bienvenido</a>
-      <button>
-       <div>
-         <div>
-           <div id="usernav"></div>
-           <a href="#" id="close">cerrar sesión</a>
-         </div>
-       </div>
-      </button>
-    </nav>
+      <ul>
+          <li><a  href="index.html">Inicio</a></li>
+       
+          <li><a href="categories.html">Categorías</a></li>
+          <li><a href="products.html">Productos</a></li>
+          <li><a  href="sell.html">Vender</a></li>
+         
+          <li><a href="#" id="usernav"><a href="#"></a></a>
+            <ul>
+              <li><a href="cart.html">Mi carrito</a></li>
+              <li><a href="my-profile.html">Mi perfil</a>
+                <li><a href="#" id="close">cerrar sesión</a></li>
+                </li>
+              
+            </ul>
+            </li>
+      </ul>
+  </nav>
+
+
+
+   
     
-    <nav class="site-header sticky-top py-1 bg-dark">
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-        <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-        <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-        <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      </div>
-    </nav>
+  
     <main role="main">
       <section class="jumbotron text-center">
         <div class="m-5">

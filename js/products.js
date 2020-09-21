@@ -53,7 +53,7 @@ function tabla(datos){
 
         contenedor.innerHTML += `
         <tr class="fondoC">
-        <th class="nombrE">${datos[i].name}</th>
+        <th class="nombrE">${datos[i].name} </th> 
         <th class="descripcio">${datos[i].description}</th>
         <th class="costo">${datos[i].cost} ${datos[i].currency}</th>
         <th class="bloque"><img src="${datos[i].imgSrc}" class="autoF"></th>
@@ -61,7 +61,7 @@ function tabla(datos){
         <th class="bloque">${datos[i].soldCount} SoldCount</th>
        </tr>
 
-        
+       <a  href="product-info.html">Ir al auto</a>
         
         `
         
@@ -225,7 +225,7 @@ asc.addEventListener('click', function(e){
 
 
   getJSONData(url).then(function(resultado)
-  {
+  {alert('funciona?');
       if (resultado.status === 'ok')
       { 
           categoriasArray = resultado.data;
@@ -240,7 +240,7 @@ desc.addEventListener('click', function(e){
 
 
   getJSONData(url).then(function(resultado)
-  {
+  {alert('funciona?');
       if (resultado.status === 'ok')
       { 
           categoriasArray = resultado.data;
@@ -255,7 +255,7 @@ asc2.addEventListener('click', function(e){
 
 
   getJSONData(url).then(function(resultado)
-  {
+  {alert('funciona?');
       if (resultado.status === 'ok')
       { 
           categoriasArray = resultado.data;

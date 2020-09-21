@@ -8,6 +8,18 @@ let comment = {
     "dateTime": undefined
 }
 
+let relacionadosArray = [];
+let infoProArray = [];
+
+
+
+
+
+
+
+
+
+
 
 productitos = document.getElementById('productitos');
 
@@ -218,3 +230,52 @@ document.addEventListener('DOMContentLoaded', function(e){
 
 
 
+
+
+function mostrarProRelacionados() {
+    let htmlContentToAppendTres = '';
+
+    for (let i = 0; i < productosArray.relatedProducts.length; i++){
+        let idPro = productosArray.relatedProducts[i];
+        related = infoProArray[idPro];
+        htmlContentToAppendTres += `
+        <div class="card">
+            <figure>
+                <img src="${related.imgSrc}" alt="">
+            </figure>
+            <div class="contenido">
+                <h3>${related.name}</h3>
+                <p>${related.description}</p>
+                <p> ${related.currency} ${related.cost}</p>
+
+                     <a href="products.html">Ver mas</a>
+                    </div>
+        
+               
+       
+       
+    
+    </div>
+        `
+        document.getElementById('productosRelacionados').innerHTML = htmlContentToAppendTres;
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function(e){
+  
+
+
+    getJSONData(PRODUCTS_URL).then(function(resultado)
+    {
+        if (resultado.status === 'ok')
+        { 
+            infoProArray  = resultado.data;
+            mostrarProRelacionados();
+            
+            
+        }
+        
+    });
+   
+});
