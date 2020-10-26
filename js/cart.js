@@ -1,12 +1,79 @@
-
+let premium = document.getElementById('premium');
+let express = document.getElementById('express');
+let standard = document.getElementById('standard');
 
 let productosCartArray = [];
+let porcentajeAumentado = '';
 
 
 
 
 cartProductos = document.getElementById('cartProductos');
 
+function porcentaje(){
+
+
+   
+premium.addEventListener('click', function(){
+ let mostrarPorcentaje = '';
+
+
+  porcentajeAumentado = 15;
+  aumentar();
+
+
+    mostrarPorcentaje = `
+    <tr id="aumentarPrecio">
+    <td>Envio</td>
+    <td>${15}%</td>
+    </tr>
+        `;
+
+        document.getElementById('aumentarPrecio').innerHTML = mostrarPorcentaje;
+
+});
+
+express.addEventListener('click', function(){
+    let mostrarPorcentaje = '';
+
+    porcentajeAumentado = 7;
+    aumentar();
+   
+   
+   
+       mostrarPorcentaje = `
+       <tr id="aumentarPrecio">
+       <td>Envio</td>
+       <td>${7}%</td>
+       </tr>
+           `;
+   
+           document.getElementById('aumentarPrecio').innerHTML = mostrarPorcentaje;
+   
+   });
+
+   standard.addEventListener('click', function(){
+    let mostrarPorcentaje = '';
+    
+
+
+    porcentajeAumentado = 5;
+    aumentar();   
+   
+   
+       mostrarPorcentaje = `
+       <tr id="aumentarPrecio">
+       <td>Envio</td>
+       <td>${5}%</td>
+       </tr>
+           `;
+   
+           document.getElementById('aumentarPrecio').innerHTML = mostrarPorcentaje;
+
+   
+   });
+
+}
 
 
 function showProductos(){
@@ -49,6 +116,7 @@ function showProductos(){
  
 
  
+
           
          `
 
@@ -57,16 +125,19 @@ function showProductos(){
            document.getElementById('cartProductos').innerHTML = htmlContentToAppendDos;
     }
 
+  
+
 
     function precioTotal() {
     let mostrarPrecio = ""
 
-    let precioCantidad = "";
+
 
     let precioCosto = "";
 
         let precioTotal = 0;
 
+        let precioCantidad = "";
     
 
         let producto = productosCartArray;
@@ -78,14 +149,15 @@ function showProductos(){
 
         precioCosto += producto[i].unitCost;
 
-        precioTotal = precioTotal + precioCantidad * precioCosto;
+
+
+        precioTotal = precioTotal + (Math.round(precioCantidad *  precioCosto * 100) / 100);
+
+
 
     }
 
-        
-
-        
-
+   
 
    
 
@@ -104,8 +176,51 @@ function showProductos(){
 
     }
 
+    function aumentar(){
+        let mostrarPrecio2 = ""
 
 
+
+        let precioCosto = "";
+    
+            let precioTotal = 0;
+    
+            let precioCantidad = "";
+        
+    
+            let producto = productosCartArray;
+        
+        let  precioAumentado = ''
+
+        for(let i = 0; i < producto.length; i++){
+
+            precioCantidad += producto[i].count;
+    
+            precioCosto += producto[i].unitCost;
+    
+            precioTotal = precioTotal + precioCantidad * precioCosto;
+    
+        }
+
+        precioAumentado  = precioTotal + (Math.round(porcentajeAumentado *  precioCosto * 100) / 100);
+
+      
+
+        mostrarPrecio2 = `
+        <tr id="total">
+        <td>Total</td>
+        <td>${precioAumentado}</td>
+        </tr>
+            `
+    
+          document.getElementById('total').innerHTML = mostrarPrecio2;
+
+          
+    
+       }
+
+
+porcentaje();
 
 document.addEventListener('DOMContentLoaded', function(e){
   
@@ -118,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             productosCartArray.push(...resultado.data.articles);
             showProductos();
             precioTotal();
+            
             
         }
     });

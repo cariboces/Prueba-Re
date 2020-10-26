@@ -1,0 +1,124 @@
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100hv;
+    padding: 0 20px;
+    
+}
+
+.abrir{
+    padding: 15px 30px;
+    background-image: linear-gradient(to bottom right, #375da5, #33c2d4);
+    border-radius: 30px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 3px 3px rgba(55, 93, 165, .05);
+    transition: .2s;
+}
+
+.abrir:hover{
+    box-shadow: 0 0 15px 10px rgba(55, 93, 165, .2);
+    transform: translateY(-2px);
+}
+
+.modal-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: .2s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.show{
+    opacity: 1 !important;
+    z-index: 9999 !important;
+}
+
+.modal-container{
+    width: 600px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #375da5, #33c2d4);
+    border-radius: 5px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .05);
+}
+
+.modal-content{
+    position: relative;
+    padding-top: 50px;
+}
+
+.modal-content .cerrar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid rgba(255, 255, 255, .5);
+    color: rgb(213, 0, 0);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.modal-content .cerrar:hover{
+    border: 1px solid rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.modal-content h1, .modal-content p{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.modal-content .separador{
+border-bottom: 1px solid rgba(255, 255, 255, .5);
+margin: 30px 0px 40px 0px;
+}
+
+
+.modal-content .aceptar{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.modal-content .aceptar:hover{
+    border: 1px solid rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.modal-content p{
+    color: teal;
+}
+
+.modal-content input{
+    width: 100px;
+    margin-left: 40%;
+    
+}
+
+.modal-content .radio{
+    margin-left: 20%; 
+   
+    
+}

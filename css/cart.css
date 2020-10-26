@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
 
 .cart-page{
     margin: 80px auto;
@@ -18,7 +25,7 @@ th{
     text-align: left;
     padding: 5px;
     color: #ffffff;
-    background: #ff523b;
+    background:  rgb(67, 126, 204);
     font-weight: normal;   
 }
 
@@ -33,7 +40,7 @@ td input {
 }
 
 td a{
-    color: #ff523b;
+    color:  #375da5;
     font-size: 12px;
 }
 
@@ -50,7 +57,7 @@ td img{
 }
 
 .total-price table{
-    border-top: 3px solid #ff523b;
+    border-top: 3px solid  #375da5;
     width: 100%;
     max-width: 400px;
 
@@ -65,16 +72,18 @@ th:last-child{
 }
 
 .envio{
-    margin-top: 100px;
-  margin-left: 700px;
+  margin-top: 100px;
+  margin-left: 40%;
   color: #ffffff;
-  background: #f3c0ba;
+  background: #bad1f3;
   font-weight: normal;  
   align-content: center;
-  border-top: 3px solid #ff523b;
+  border-top: 3px solid   rgb(106, 158, 226);
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   text-align: center;
+  margin-bottom: 20px;
+  
 }
 .envio input{
     margin-left: 20px;
@@ -85,4 +94,8 @@ th:last-child{
     background: cornsilk;
     font-weight: normal;
     margin: 4px;
+}
+
+.validacion{
+background:rgb(69, 95, 238);
 }

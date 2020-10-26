@@ -9,10 +9,11 @@
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
   <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/modal.css">
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
+  
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -56,9 +57,10 @@
           <td>Subtotal</td>
           <td>00.00</td>
       </tr>
-      <tr>
-          <td>Tax</td>
-          <td>0.00</td>
+      <tr id="aumentarPrecio">
+        <td>Envio</td>
+        <td>00.00</td>
+         
       </tr>
 
       <tr id="total">
@@ -71,37 +73,66 @@
   </table>
 
 </div>
-<div class="envio">
+
+<div class="container">
+  <a href="#" class="abrir">Forma de pago</a>
+  <div class="modal-background">
+    <div class="modal-container">
+      <div class="modal-content">
+        <span class="cerrar">X</span>
+        <h1>Forma de pago</h1>
+       <input type="radio" class="radio">
+        <p>Tarjeta de credito</p>
+        <p>Numero de Tarjeta</p> 
+        <input type="text">
+        <p>Codigo de seg</p>
+        <input type="text">
+        <p>Vencimiento (MM/AA)</p>
+        <input type="text">
+        <div class="separador"></div>
+       
+        <input type="radio" class="radio"><p>transferecnia bancaria</p> 
+        <p>Numero de cuenta</p>
+        <input type="text" name="" id="">
+        <a href="#" class="aceptar">Aceptar</a>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+
+
+
+
+<form class="envio" >
     
   <h5>ENVIO</h5>
-   <input type="text" placeholder="Dirección"> 
+   <input type="text" placeholder="Dirección" id="direccion" required>  
    <br>
   <br>
-  <input type="text" placeholder="Pais"> 
+  <input type="text" placeholder="Esquina" id='esquina' required> 
+  <br>
+ <br>
+  <input type="text" placeholder="Pais" id="pais" required> 
   <br>
  <h5>Tipo de envio</h5>
- <input type="radio" name="" id="">Premium
+ <input type="radio" name="" id="premium" required>Premium (2-5 días)
  <br>
- <input type="radio" name="" id="">Express
+ <input type="radio" name="" id="express" required>Express (5-8 días)
  <br>
- <input type="radio" name="" id="">Standard
+ <input type="radio" name="" id="standard" required>Standard (12 a 15 días)
   <br>
- <button>Enviar</button>
+ <button id="envio">Enviar</button>
 
   
 
 
-</div>
+</form>
 
 
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
+
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -115,6 +146,8 @@
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/modal.js"></script>
+
 </body>
 
 </html>
