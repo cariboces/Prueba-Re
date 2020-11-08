@@ -52,16 +52,32 @@ function tabla(datos){
         
 
         contenedor.innerHTML += `
-        <tr class="fondoC">
-        <th class="nombrE">${datos[i].name} </th> 
-        <th class="descripcio">${datos[i].description}</th>
-        <th class="costo">${datos[i].cost} ${datos[i].currency}</th>
-        <th class="bloque"><img src="${datos[i].imgSrc}" class="autoF"></th>
-        
-        <th class="bloque">${datos[i].soldCount} SoldCount</th>
-       </tr>
 
-       <a  href="product-info.html">Ir al auto</a>
+
+
+
+
+       
+       <article class="product">
+           <div class="img-container">
+               <img src="${datos[i].imgSrc}" alt="product" class="product-img"> 
+          <button class="bag-btn" data-id="1">
+              <i class="fas fa-shopping-cart"></i>
+              <a href="product-info.html">Ir al auto</a>
+          </button>
+           </div>
+           <h3>${datos[i].name}</h3>
+           <p> ${datos[i].description} </p>
+           <h4>${datos[i].cost} ${datos[i].currency}</h4>
+           <h4>${datos[i].soldCount} </<h4>
+
+       </article>
+
+       <!--end of single product-->
+
+
+
+
         
         `
         
@@ -96,14 +112,21 @@ for( let valor of categorias){
     
 
     contenedor.innerHTML += `
-    <tr class="fondoC">
-    <th class="nombrE">${categorias[i].name}</th>
-    <th class="descripcio">${categorias[i].description}</th>
-    <th class="costo">${categorias[i].cost} ${categorias[i].currency}</th>
-    <th class="bloque"><img src="${categorias[i].imgSrc}" class="autoF"></th>
-    
-    <th class="bloque">${categorias[i].soldCount} SoldCount</th>
-   </tr>
+    <article class="product">
+    <div class="img-container">
+        <img src="${categorias[i].imgSrc}" alt="product" class="product-img"> 
+   <button class="bag-btn" data-id="1">
+       <i class="fas fa-shopping-cart"></i>
+       <a href="product-info.html">Ir al auto</a>
+   </button>
+    </div>
+    <h3>${categorias[i].name}</h3>
+    <p> ${categorias[i].description} </p>
+    <h4>${categorias[i].cost} ${categorias[i].currency}</h4>
+    <h4>${categorias[i].soldCount} </<h4>
+
+</article>
+
 
     
     
@@ -138,14 +161,20 @@ for( let valor of categorias){
     
 
     contenedor.innerHTML += `
-    <tr class="fondoC">
-    <th class="nombrE">${categorias[i].name}</th>
-    <th class="descripcio">${categorias[i].description}</th>
-    <th class="costo">${categorias[i].cost} ${categorias[i].currency}</th>
-    <th class="bloque"><img src="${categorias[i].imgSrc}" class="autoF"></th>
-    
-    <th class="bloque">${categorias[i].soldCount} SoldCount</th>
-   </tr>
+    <article class="product">
+    <div class="img-container">
+        <img src="${categorias[i].imgSrc}" alt="product" class="product-img"> 
+   <button class="bag-btn" data-id="1">
+       <i class="fas fa-shopping-cart"></i>
+       <a href="product-info.html">Ir al auto</a>
+   </button>
+    </div>
+    <h3>${categorias[i].name}</h3>
+    <p> ${categorias[i].description} </p>
+    <h4>${categorias[i].cost} ${categorias[i].currency}</h4>
+    <h4>${categorias[i].soldCount} </<h4>
+
+</article>
 
     
     
@@ -176,14 +205,20 @@ for( let valor of categorias){
     
 
     contenedor.innerHTML += `
-    <tr class="fondoC">
-    <th class="nombrE">${categorias[i].name}</th>
-    <th class="descripcio">${categorias[i].description}</th>
-    <th class="costo">${categorias[i].cost} ${categorias[i].currency}</th>
-    <th class="bloque"><img src="${categorias[i].imgSrc}" class="autoF"></th>
-    
-    <th class="bloque">${categorias[i].soldCount} SoldCount</th>
-   </tr>
+    <article class="product">
+    <div class="img-container">
+        <img src="${categorias[i].imgSrc}" alt="product" class="product-img"> 
+   <button class="bag-btn" data-id="1">
+       <i class="fas fa-shopping-cart"></i>
+       <a href="product-info.html">Ir al auto</a>
+   </button>
+    </div>
+    <h3>${categorias[i].name}</h3>
+    <p> ${categorias[i].description} </p>
+    <h4>${categorias[i].cost} ${categorias[i].currency}</h4>
+    <h4>${categorias[i].soldCount} </<h4>
+
+</article>
 
     
     
@@ -225,7 +260,7 @@ asc.addEventListener('click', function(e){
 
 
   getJSONData(url).then(function(resultado)
-  {alert('funciona?');
+  {
       if (resultado.status === 'ok')
       { 
           categoriasArray = resultado.data;
@@ -240,7 +275,7 @@ desc.addEventListener('click', function(e){
 
 
   getJSONData(url).then(function(resultado)
-  {alert('funciona?');
+  {
       if (resultado.status === 'ok')
       { 
           categoriasArray = resultado.data;
@@ -255,7 +290,7 @@ asc2.addEventListener('click', function(e){
 
 
   getJSONData(url).then(function(resultado)
-  {alert('funciona?');
+  {
       if (resultado.status === 'ok')
       { 
           categoriasArray = resultado.data;

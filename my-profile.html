@@ -11,6 +11,7 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="css/profile.css">
 
   <style>
     .bd-placeholder-img {
@@ -31,13 +32,13 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilomenu.css">
 </head>
 
 <body>
-
   <nav>
     <ul>
-        <li><a  href="index.html">Inicio</a></li>
+        <li><a  href="principal.html">Inicio</a></li>
      
         <li><a href="categories.html">Categorías</a></li>
         <li><a href="products.html">Productos</a></li>
@@ -46,7 +47,7 @@
         <li><a href="#" id="usernav"><a href="#"></a></a>
           <ul>
             <li><a href="cart.html">Mi carrito</a></li>
-            <li><a href="my-profile.html">Mi perfil</a>
+            <li><a href="#">Mi perfil</a>
               <li><a href="#" id="close">cerrar sesión</a></li>
               </li>
             
@@ -62,6 +63,124 @@
       <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
     </div>
   </div>
+
+  <h3>Tu perfil</h3>
+
+  
+<table id="usuarioDatos" class="usuario">
+
+
+  <tr>
+
+    <td>Nombre</td>
+
+    <td class="blanco"></td>
+
+  </tr>
+
+  <tr>
+
+    <td>Apellido:</td>
+
+    <td></td>
+
+  </tr>
+  <tr>
+
+    <td> Email:</td>
+
+    <td></td>
+
+
+  </tr>
+
+  <tr>
+
+    <td> Telefono:</td>
+
+    <td></td>
+
+
+  </tr>
+
+</table>
+
+
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  <form class="usuario" id="form" >
+    
+    <h5>Editar datos de usuario</h5>
+     <input type="text" placeholder="Nombre" id="nombre" required>  
+     <br>
+    <br>
+    <input type="text" placeholder="Apellido" id="apellido" required>  
+    <br>
+   <br>
+    <input type="text" placeholder="Email" id='email' required> 
+    <br>
+   <br>
+    <input type="text" placeholder="Telefono" id="telefono" required> 
+    <br>
+  
+   <button class="usuarioB">Guardar</button>
+  
+    
+
+  
+  </form>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
@@ -87,6 +206,8 @@
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/datosProfile.js"></script>
 </body>
 
 </html>

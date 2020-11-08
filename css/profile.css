@@ -1,0 +1,55 @@
+.usuario{
+    margin-top: 100px;
+    margin-left: 40%;
+    color: #ffffff;
+    background: #bad1f3;
+    font-weight: normal;  
+    align-content: center;
+    border-top: 3px solid   rgb(106, 158, 226);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+  .usuario input{
+      margin-left: 20px;
+      border-style: none;
+  }
+  .usuarioB{
+      border-style: none;
+      background: cornsilk;
+      font-weight: normal;
+      margin: 4px;
+      color: #84ace8;
+  }
+
+  .usuario tr td{
+   
+    font-weight: normal;
+    margin: 4px;
+    
+
+  }
+
+  .usuario tr{
+     
+      border: 1px solid   rgb(106, 158, 226) ;
+
+  }
+
+
+
+  .blanco{
+    background: rgb(253, 236, 236);
+    color: #84ace8;
+  
+      
+  }
+
+  h3{
+    color: #84ace8;
+    font-size: 500px;
+    text-align: center;
+
+  }

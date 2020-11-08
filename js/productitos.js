@@ -222,9 +222,22 @@ document.addEventListener('DOMContentLoaded', function(e){
         { 
             comentariosArray = resultado.data;
             showComentarios();
+
+            getJSONData(PRODUCTS_URL).then(function(resultado)
+            {
+                if (resultado.status === 'ok')
+                { 
+                    infoProArray  = resultado.data;
+                    mostrarProRelacionados();
+                    
+                    
+                }
+                
+            });
             
         }
     });
+    
 });
 
 
@@ -262,20 +275,3 @@ function mostrarProRelacionados() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function(e){
-  
-
-
-    getJSONData(PRODUCTS_URL).then(function(resultado)
-    {
-        if (resultado.status === 'ok')
-        { 
-            infoProArray  = resultado.data;
-            mostrarProRelacionados();
-            
-            
-        }
-        
-    });
-   
-});
